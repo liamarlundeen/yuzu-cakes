@@ -1,0 +1,135 @@
+/* src/app/styles/menu.css */
+/* Full width background styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f7f5;
+  }
+  
+  .menu-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 2rem 0;
+    color: #4a3728;
+    font-family: 'Times New Roman', serif;
+  }
+  
+  /* Inner container to center content */
+  .menu-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .menu-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #4a3728;
+  }
+  
+  .menu-section {
+    margin-bottom: 4rem;
+  }
+  
+  .section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+  }
+  
+  .section-title h2 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 0 1.5rem;
+    white-space: nowrap;
+    color: #4a3728;
+  }
+  
+  .line {
+    height: 1px;
+    background-color: #ccc;
+    flex-grow: 1;
+    max-width: 200px;
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .menu-item {
+    width: 200px;
+    text-align: left;
+  }
+  
+  .item-image {
+    width: 100%;
+    height: 180px;
+    background-color: #e5e5e5;
+    margin-bottom: 0.75rem;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    font-weight: bold;
+  }
+  
+  .menu-item p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+  }
+  
+  .custom-message {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  
+  .order-button {
+    background-color: #5b4037;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+  
+  .order-button:hover {
+    background-color: #483229;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  
+  .gallery-image {
+    width: 180px;
+    height: 180px;
+    background-color: #e5e5e5;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .menu-items {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .gallery {
+      flex-wrap: wrap;
+    }
+  }
