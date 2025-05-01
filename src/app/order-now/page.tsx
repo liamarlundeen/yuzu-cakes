@@ -137,7 +137,7 @@ export default function OrderNow() {
           <legend className="block text-sm font-semibold text-gray-900">
             Flavor <span className="text-red-500">*</span>
           </legend>
-          {/* flex + space-x will evenly gap each label */}
+          {}
           <div className="mt-2 flex flex-wrap gap-x-6 gap-y-2">
             {["Strawberry", "Biscoff", "Oreo"].map((flav) => (
               <label key={flav} className="inline-flex items-center">
