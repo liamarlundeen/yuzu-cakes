@@ -14,9 +14,7 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            
             <div id="buttonAlignment"> <button className = "ovalButton">OUR MENU</button></div>
-            
             <div>
                 <h1 className = "about-headers left-side">ABOUT THE OWNER</h1>
                 <div className="test">
