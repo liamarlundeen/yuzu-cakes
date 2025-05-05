@@ -16,5 +16,18 @@ body {
 }
 
 .about-headers {
-    color:black
+    color:black;
+    font-weight: bold;
+}
+
+.right-side {
+    text-align: right;
+}
+
+.left-side {
+    text-align: left;
+}
+
+p{
+    color: black;
 }
