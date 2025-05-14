@@ -14,7 +14,7 @@ export default function OrderNow() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch("https://script.google.com/macros/s/AKfycbzWal1z0vyo2uwb3SKYodLyKJUFcdETdhDG4Hy9mfZ3Jerv2fkopjdbSbtXjUtgZsLd/exec", {
+      const res = await fetch("https://script.google.com/macros/s/AKfycbzW9fBnGerfyFzHp6XiU8B-LEk18Gay5NZ9Kp4L117dfbuawJZrIjw1ZdLicLzzdLz8/exec", {
         method: "POST",
         body: data,
       });
@@ -49,14 +49,14 @@ export default function OrderNow() {
         <form
           onSubmit={handleSubmit}
           encType="multipart/form-data"
-          className="mt-8 space-y-6"
+          className="mt-10 space-y-10"
         >
           {/* Name */}
           <div>
             <label className="block text-sm font-semibold text-gray-900">
               Name <span className="text-red-500">*</span>
             </label>
-            <div className="mt-1 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-8">
               <input
                 name="firstName"
                 type="text"
@@ -75,7 +75,7 @@ export default function OrderNow() {
           </div>
 
           {/* Email & Phone */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             <div>
               <label className="block text-sm font-semibold text-gray-900">
                 Email <span className="text-red-500">*</span>
@@ -85,7 +85,7 @@ export default function OrderNow() {
                 type="email"
                 required
                 placeholder="you@example.com"
-                className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
+                className="mt-3 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
               />
             </div>
             <div>
@@ -97,7 +97,7 @@ export default function OrderNow() {
                 type="tel"
                 required
                 placeholder="(123) 456-7890"
-                className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
+                className="mt-3 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
               />
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function OrderNow() {
               type="text"
               required
               placeholder="@yourhandle"
-              className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
+              className="mt-3 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
             />
           </div>
 
@@ -128,7 +128,7 @@ export default function OrderNow() {
               name="pickupDate"
               type="date"
               required
-              className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
+              className="mt-3 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
             />
           </div>
 
@@ -138,7 +138,7 @@ export default function OrderNow() {
             Flavor <span className="text-red-500">*</span>
           </legend>
           {}
-          <div className="mt-2 flex flex-wrap gap-x-6 gap-y-2">
+          <div className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
             {["Strawberry", "Biscoff", "Oreo"].map((flav) => (
               <label key={flav} className="inline-flex items-center">
                 <input
@@ -163,7 +163,7 @@ export default function OrderNow() {
               name="occasion"
               type="text"
               placeholder="Please explain the occasion for this cake."
-              className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
+              className="mt-3 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
             />
           </div>
 
@@ -176,13 +176,14 @@ export default function OrderNow() {
               name="writing"
               type="text"
               placeholder="Exact text for the cake."
-              className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
+              className="mt-3 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
             />
+
             <input
               name="writingColor"
               type="text"
               placeholder="What color should it be?"
-              className="mt-2 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
+              className="mt-4 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
             />
           </div>
 
@@ -195,7 +196,7 @@ export default function OrderNow() {
               name="instructions"
               rows={4}
               placeholder="Any extra details for your cake?"
-              className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
+              className="mt-3 w-full rounded-md border border-gray-300 px-3 py-2 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-300 text-gray-900"
             />
           </div>
 
@@ -207,7 +208,7 @@ export default function OrderNow() {
             <input
               name="upload"
               type="file"
-              className="mt-2 block w-full text-gray-700"
+              className="mt-3 block w-full text-gray-700"
             />
           </div>
 
