@@ -1,8 +1,9 @@
 import "../styles/about.css"
+import Link from 'next/link';
 
 export default function About() {
     return (
-        <div className="min-h-screen bg-white p-8">
+        <div className="about-container">
             <h1 className="about-title">ABOUT US</h1>
             <div>
                 <h1 className = "about-headers right-side">WHAT IS YUZU CAKE?</h1>
@@ -14,7 +15,7 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            <div id="buttonAlignment"> <button className = "ovalButton">OUR MENU</button></div>
+            <div id="buttonAlignment"><Link href="/menu"><button className="ovalButton">OUR MENU</button></Link></div>
             <div>
                 <h1 className = "about-headers left-side">ABOUT THE OWNER</h1>
                 <div className="test">

@@ -2,6 +2,7 @@
 // https://docs.google.com/spreadsheets/d/11yn-0T0mmvavpUXiCZggPHyKwdF4MJRRuKwnsCTUBZg/edit?gid=0#gid=0
 
 import React, { useState, FormEvent } from "react";
+import "../styles/menu.css"
 
 export default function OrderNow() {
   const [submitting, setSubmitting] = useState(false);
@@ -35,6 +36,7 @@ export default function OrderNow() {
   }
 
   return (
+    <div className="menu-container">
     <div className="min-h-screen bg-[#FAF7F2] px-4 py-8 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         {/* Header */}
@@ -206,6 +208,7 @@ export default function OrderNow() {
               Inspiration Pictures
             </p>
             <input
+              id="upload"
               name="upload"
               type="file"
               className="mt-3 block w-full text-gray-700"
@@ -236,6 +239,7 @@ export default function OrderNow() {
           </button>
         </form>
       </div>
+    </div>
     </div>
   );
 }
