@@ -142,7 +142,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
           <div className="border-t border-black/20">
-            <p className="text-xs text-center py-4">
+            <p className="text-xs text-center items-center py-4">
               Copyright © 2025 YUZU CAKE
             </p>
           </div>
