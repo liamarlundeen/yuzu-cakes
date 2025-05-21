@@ -51,10 +51,15 @@ p{
     align-content: right;
 }
 
+.ovalButton:hover {
+    background-color: #483229;
+}
+
 #buttonAlignment{
     text-align: right;
     margin: 30px;
 }
+
 
 .Container{
     display: flex;

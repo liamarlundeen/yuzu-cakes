@@ -15,7 +15,7 @@ export default function About() {
                     </p>
                 </div>
             </div>
-            <div id="buttonAlignment"><Link href="/menu"><button className="ovalButton">OUR MENU</button></Link></div>
+            <div className="menu-button" id="buttonAlignment"><Link href="/menu"><button className="ovalButton">OUR MENU</button></Link></div>
             <div>
                 <h1 className = "about-headers left-side">ABOUT THE OWNER</h1>
                 <div className="test">
