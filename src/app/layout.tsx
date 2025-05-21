@@ -38,7 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
             <Link href="/order-now">
               <button
-                className="bg-[#DDD6CB] border-4 border-[#3D2720] text-[#4a3728] px-6 py-2 rounded-full hover:bg-[#B19C86] hover:text-white transition duration-300 active:bg-[#947662] active:text-white focus:outline-none"
+                className="bg-[#DDD6CB] border-2 border-[#3D2720] text-[#483229] px-6 py-2 rounded-full hover:bg-[#B19C86] hover:text-white transition duration-300 active:bg-[#947662] active:text-white focus:outline-none"
               >
                 Order Now
               </button>
