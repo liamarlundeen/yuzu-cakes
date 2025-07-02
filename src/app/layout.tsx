@@ -1,7 +1,7 @@
 // app/layout.tsx
 import Link from 'next/link';
+import Image from 'next/image';
 import './globals.css';
-
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -11,15 +11,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <header className="bg-[#f7f7f7] shadow-md w-full">
           <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 py-4">
             <div className="flex items-center space-x-2">
-              <img
-                src="yuzu_logo.png"
+              <Image
+                src="/yuzu_logo.png"
                 alt="Yuzu Heya Logo"
                 className="h-10 w-auto"
+                width={40}
+                height={40}
+                priority
               />
-              <img 
-                src='yuzu_head.png'
-                alt="yuzu heya head"
-                className='h-10 w-auto'
+              <Image 
+                src="/yuzu_head.png"
+                alt="Yuzu Heya Head"
+                className="h-10 w-auto"
+                width={40}
+                height={40}
+                priority
               />
             </div>
 
@@ -52,15 +58,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <footer className="bg-[#DDD6CB] text-[#4a3728] w-full">
           <div className="container mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="flex items-center justify-center md:justify-start space-x-4">
-              <img
-                src="yuzu_logo.png"
+              <Image
+                src="/yuzu_logo.png"
                 alt="Yuzu Heya Logo"
                 className="h-16 w-auto"
+                width={64}
+                height={64}
               />
-              <img
-                src="yuzu_head.png"
+              <Image
+                src="/yuzu_head.png"
                 alt="Yuzu Heya Head"
                 className="h-16 w-auto"
+                width={64}
+                height={64}
               />
             </div>
             <div className="flex justify-center space-x-8 sm:space-x-16">

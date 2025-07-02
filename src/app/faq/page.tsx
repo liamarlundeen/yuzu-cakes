@@ -40,7 +40,7 @@ export default function FAQ() {
         <main className="min-h-screen bg-[#f9f7f5] px-4 py-10 md:px-16 lg:px-48">
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-center text-black tracking-wide mb-12">FAQS</h1>
             <div className="space-y-16">
-                {faqData.map((section, idx) => (
+                {faqData.map((section) => (
                     <section key={section.section}>
                         <div className="border-t border-black mb-6" />
                         <div className="flex flex-col md:flex-row md:items-start mb-6">
