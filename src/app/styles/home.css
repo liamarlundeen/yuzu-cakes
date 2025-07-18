@@ -10,10 +10,11 @@ body {
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 2rem 0;
   color: #4a3728;
   font-family: 'Times New Roman', serif;
-  background-color: #f9f7f5;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navigation */
@@ -23,6 +24,7 @@ body {
   align-items: center;
   padding: 1rem 2rem;
   background-color: #f9f7f5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .logo-placeholder {
@@ -53,7 +55,6 @@ body {
 .hero-section {
   text-align: center;
   padding: 6rem 2rem;
-  background-color: #f9f7f5;
 }
 
 .hero-title {
@@ -62,6 +63,12 @@ body {
   margin: 0;
   color: #4a3728;
   letter-spacing: 0.1em;
+}
+
+.hero-divider {
+  border-top: 1px solid #b5b5b5;
+  margin: 1.5rem auto 0 auto;
+  max-width: 600px;
 }
 
 /* Content Wrapper */
@@ -85,7 +92,6 @@ body {
 .events-section {
   padding: 4rem 0;
   border-top: 1px solid #ddd;
-  background-color: #f9f7f5;
 }
 
 .events-grid {
@@ -111,7 +117,6 @@ body {
 .gallery-section {
   padding: 4rem 0;
   border-top: 1px solid #ddd;
-  background-color: #f9f7f5;
 }
 
 .gallery-grid {
@@ -144,7 +149,6 @@ body {
 .mailing-section {
   padding: 4rem 0;
   border-top: 1px solid #ddd;
-  background-color: #f9f7f5;
 }
 
 .mailing-form {
@@ -198,7 +202,6 @@ body {
 .footer {
   padding: 2rem 0;
   border-top: 1px solid #ddd;
-  background-color: #f9f7f5;
 }
 
 .footer-content {
@@ -240,6 +243,11 @@ body {
 
   .hero-title {
     font-size: 2rem;
+  }
+
+  .hero-divider,
+  .section-divider {
+    max-width: 90%;
   }
 
   .events-grid {

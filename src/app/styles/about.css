@@ -84,3 +84,8 @@ p{
 .test{
     display:flex;
 }
+
+.section-divider {
+    border-top: 1px solid #b5b5b5;
+    margin-bottom: 1.5rem;
+}

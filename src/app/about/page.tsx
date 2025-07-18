@@ -6,6 +6,7 @@ export default function About() {
     return (
         <div className="about-container">
             <h1 className="about-title">ABOUT US</h1>
+            <div className="section-divider"></div>
             <div>
                 <h1 className="about-headers right-side">WHAT IS YUZU CAKE?</h1>
                 <div className="Container">

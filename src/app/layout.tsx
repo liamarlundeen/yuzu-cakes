@@ -34,10 +34,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <ul className="flex space-x-6 font-serif text-[#4a3728]">
                 <li><Link href="/" className="hover:text-[#6d5c4b] transition-colors">Home</Link></li>
                 <li><Link href="/menu" className="hover:text-[#6d5c4b] transition-colors">Menu</Link></li>
-                <li><Link href="/contact" className="hover:text-[#6d5c4b] transition-colors">Contact</Link></li>
                 <li><Link href="/about" className="hover:text-[#6d5c4b] transition-colors">About</Link></li>
                 <li><Link href="/faq" className="hover:text-[#6d5c4b] transition-colors">FAQ</Link></li>
-                <li><Link href="/calendar" className="hover:text-[#6d5c4b] transition-colors">Calendar</Link></li>
                 <li><Link href="/terms" className="hover:text-[#6d5c4b] transition-colors">Terms</Link></li>
               </ul>
             </nav>
@@ -83,9 +81,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <li>
                     <Link href="/about" className="hover:text-[#6d5c4b] transition-colors">About</Link>
                   </li>
-                  <li>
-                    <Link href="/contact" className="hover:text-[#6d5c4b] transition-colors">Contact</Link>
-                  </li>
                 </ul>
               </div>
               <div>
@@ -93,9 +88,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <ul className="space-y-1 text-sm">
                   <li>
                     <Link href="/terms" className="hover:text-[#6d5c4b] transition-colors">Terms</Link>
-                  </li>
-                  <li>
-                    <Link href="/calendar" className="hover:text-[#6d5c4b] transition-colors">Calendar</Link>
                   </li>
                   <li>
                     <Link href="/faq" className="hover:text-[#6d5c4b] transition-colors">FAQs</Link>

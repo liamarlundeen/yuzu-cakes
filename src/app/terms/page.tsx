@@ -4,6 +4,7 @@ export default function FAQ() {
     return (
         <div className="terms-container">
             <h1 className="terms-title">TERMS & CONDITIONS</h1>
+            <div className="section-divider"></div>
             <div className="terms-content">
                 <div className="info-box">
                     <h1 className="terms-header">GENERAL</h1>

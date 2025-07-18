@@ -1,10 +1,15 @@
 "use client";
 // https://docs.google.com/spreadsheets/d/11yn-0T0mmvavpUXiCZggPHyKwdF4MJRRuKwnsCTUBZg/edit?gid=0#gid=0
 
-import React, { useState, FormEvent } from "react";
+import React, { useState, FormEvent, useEffect } from "react";
 
 export default function OrderNow() {
   const [submitting, setSubmitting] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -34,11 +39,18 @@ export default function OrderNow() {
     setSubmitting(false);
   }
 
+  if (!isLoaded) {
+    return (
+      <div className="w-full h-screen flex items-center justify-center bg-[#f9f7f5]">
+        <div className="animate-pulse text-[#4a3728]">Loading...</div>
+      </div>
+    );
+  }
+
   return (
     <div className="w-full max-w-full m-0 py-8 px-0 text-[#4a3728] font-['Times_New_Roman',serif] bg-[#f9f7f5]">
       <div className="min-h-screen px-4 py-8 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
-          {/* Header */}
           <h1 className="text-4xl font-bold text-center text-[#4a3728] uppercase">
             ORDER NOW
           </h1>
@@ -46,13 +58,11 @@ export default function OrderNow() {
             If you would like to order a custom cake, please fill out this form.
           </p>
 
-          {/* Form */}
           <form
             onSubmit={handleSubmit}
             encType="multipart/form-data"
             className="mt-8 space-y-6"
           >
-            {/* Name */}
             <div>
               <label className="block text-sm font-semibold text-[#4a3728]">
                 Name <span className="text-red-500">*</span>
@@ -75,7 +85,6 @@ export default function OrderNow() {
               </div>
             </div>
 
-            {/* Email & Phone */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-sm font-semibold text-[#4a3728]">
@@ -103,7 +112,6 @@ export default function OrderNow() {
               </div>
             </div>
 
-            {/* Venmo or Zelle */}
             <div>
               <label className="block text-sm font-semibold text-[#4a3728]">
                 Venmo or Zelle <span className="text-red-500">*</span>
@@ -120,7 +128,6 @@ export default function OrderNow() {
               />
             </div>
 
-            {/* Pick-Up Date */}
             <div>
               <label className="block text-sm font-semibold text-[#4a3728]">
                 Pick-Up Date <span className="text-red-500">*</span>
@@ -133,7 +140,6 @@ export default function OrderNow() {
               />
             </div>
 
-            {/* Flavor */}
             <fieldset>
               <legend className="block text-sm font-semibold text-[#4a3728]">
                 Flavor <span className="text-red-500">*</span>
@@ -153,7 +159,6 @@ export default function OrderNow() {
               </div>
             </fieldset>
 
-            {/* Occasion */}
             <div>
               <label className="block text-sm font-semibold text-[#4a3728]">
                 Occasion
@@ -166,7 +171,6 @@ export default function OrderNow() {
               />
             </div>
 
-            {/* Writing on the Cake */}
             <div>
               <label className="block text-sm font-semibold text-[#4a3728]">
                 Writing on the Cake
@@ -185,7 +189,6 @@ export default function OrderNow() {
               />
             </div>
 
-            {/* Special Instructions */}
             <div>
               <label className="block text-sm font-semibold text-[#4a3728]">
                 Special Instructions
@@ -198,7 +201,6 @@ export default function OrderNow() {
               />
             </div>
 
-            {/* Inspiration Upload */}
             <div>
               <p className="text-sm text-[#4a3728] font-semibold">
                 Inspiration Pictures
@@ -211,7 +213,6 @@ export default function OrderNow() {
               />
             </div>
 
-            {/* Disclaimer */}
             <div className="flex items-start">
               <input
                 id="disclaimer"
@@ -225,7 +226,6 @@ export default function OrderNow() {
               </label>
             </div>
 
-            {/* Submit */}
             <button
               type="submit"
               disabled={submitting}
