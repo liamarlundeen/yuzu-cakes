@@ -6,7 +6,7 @@ import './styles/home.css'
 export default function Home() {
   const [email, setEmail] = useState('')
 
-  const handleEmailSubmit = (e) => {
+  const handleEmailSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     console.log('Email submitted:', email)
     setEmail('')
@@ -55,7 +55,7 @@ export default function Home() {
       <section className="mailing-section">
         <div className="content-wrapper">
           <h2 className="section-title">JOIN OUR MAILING LIST</h2>
-          <div className="mailing-form">
+          <form className="mailing-form" onSubmit={handleEmailSubmit}>
             <input
               type="email"
               value={email}
@@ -65,12 +65,12 @@ export default function Home() {
               required
             />
             <button 
-              onClick={handleEmailSubmit}
+              type="submit"
               className="join-button"
             >
               Join Us
             </button>
-          </div>
+          </form>
         </div>
       </section>
 
